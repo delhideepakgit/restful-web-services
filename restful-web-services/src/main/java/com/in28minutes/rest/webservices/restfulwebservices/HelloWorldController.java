@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWorldController {
 	
-	//GET
-	//URI
-	//method - "Hello World"
+	
 	@GetMapping("/hello-world")
 	public String helloWorld()
 	{
@@ -16,5 +14,9 @@ public class HelloWorldController {
 	}
 	
 	
-
+	@GetMapping("/hello-world-bean")
+	public HelloWorldBean helloWorldBean()
+	{
+		return new HelloWorldBean("Hello World");
+	}
 }
